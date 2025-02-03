@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if($result->num_rows > 0){
         $row = $result->fetch_assoc();
 
-        if($password == $row['password']){
+        if ($password == $row['password']){
             $_SESSION['user'] = $row['name'];
 
             header("Location: dashboard.php");
